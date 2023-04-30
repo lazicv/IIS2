@@ -37,12 +37,6 @@ export const SidebarData = [
             icon: <FaIcons.FaSearch />,
             role: ['guest', 'user', 'admin']
           },
-          {
-            title: "Equipment",
-            path: "/flight/search",
-            icon: <IoIcons.IoMdSettings />,
-            role: ['guest', 'user', 'admin']
-          },
         ],
       },
       {
@@ -75,6 +69,50 @@ export const SidebarData = [
             title: "Delete",
             path: "/flight/search",
             icon: <FaIcons.FaBackspace />,
+            role: ['guest', 'user', 'admin']
+          },
+        ],
+      },
+      {
+        title: "Analytics",
+        role: ['user', 'guest', 'admin'],
+        icon: <IoIcons.IoMdAnalytics />,
+        iconClosed: <RiIcons.RiArrowDownSFill />,
+        iconOpened: <RiIcons.RiArrowUpSFill />,
+     
+        subNav: [
+          {
+            title: "Regular maintance",
+            path: "/flight/search",
+            icon: <IoIcons.IoMdHammer />,
+            role: ['guest', 'user', 'admin']
+          },
+          {
+            title: "Emergency maintance",
+            path: "/flight/search",
+            icon: <FaIcons.FaScrewdriver />,
+            role: ['guest', 'user', 'admin']
+          },
+        ],
+      },
+      {
+        title: "Equipment",
+        role: ['user', 'guest', 'admin'],
+        icon: <AiIcons.AiFillDropboxSquare />,
+        iconClosed: <RiIcons.RiArrowDownSFill />,
+        iconOpened: <RiIcons.RiArrowUpSFill />,
+     
+        subNav: [
+          {
+            title: "All equipment",
+            path: "/flight/search",
+            icon: <IoIcons.IoMdBook />,
+            role: ['guest', 'user', 'admin']
+          },
+          {
+            title: "Add",
+            path: "/flight/search",
+            icon: <IoIcons.IoMdCreate />,
             role: ['guest', 'user', 'admin']
           },
         ],
