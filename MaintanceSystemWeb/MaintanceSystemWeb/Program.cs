@@ -1,7 +1,13 @@
+
+
+using MaintanceSystemWeb.Settings;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+builder.Services.AddDbContext<DotnetDbContext>(o => o.UseNpgsql(builder.Configuration.GetConnectionString("DB")));
 
 var app = builder.Build();
 
