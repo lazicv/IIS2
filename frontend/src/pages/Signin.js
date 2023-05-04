@@ -34,7 +34,7 @@ function Signin() {
 
     const submitUser = (e) => {
         e.preventDefault();
-        axios.post(`http://localhost:8084/signin`, user)
+        axios.post(`http://localhost:7121/api/auth/login`, user)
             .then(res => {
                 if (res.status === 200) {
                     toast.success('Logged in!', {
@@ -42,13 +42,12 @@ function Signin() {
                     });
                     localStorage.setItem('user', JSON.stringify(res.data))
                     localStorage.setItem('role', res.data.Role)
-                    console.log("YOOOOOOOOOOOOO")
                     let user = localStorage.getItem('user')
                     console.log("USER:")
                     let parsedUser = JSON.parse(user)
                     console.log(parsedUser["Role"])
-                    navigate("/flight/search")
-                    navigate(0)
+                    navigate("/homePage")
+                    navigate(1)
                 }
             })
             .catch(error => {

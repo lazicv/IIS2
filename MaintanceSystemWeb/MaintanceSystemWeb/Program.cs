@@ -1,13 +1,27 @@
 
 
+using MaintanceSystemWeb.Repository;
+using MaintanceSystemWeb.Repository.Core;
+using MaintanceSystemWeb.Service;
+using MaintanceSystemWeb.Service.Core;
 using MaintanceSystemWeb.Settings;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddDbContext<DotnetDbContext>(o => o.UseNpgsql(builder.Configuration.GetConnectionString("DB")));
+builder.Services.AddCors(o =>
+{
+    o.AddPolicy("Policy", builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -20,6 +34,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("Policy");
 app.UseStaticFiles();
 
 app.UseRouting();

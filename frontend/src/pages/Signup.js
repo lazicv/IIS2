@@ -38,9 +38,9 @@ function Signup() {
 
     const submitUser = (e) => {
         e.preventDefault();
-        axios.post(`http://localhost:8084/signup`, user)
+        axios.post(`http://localhost:7121/api/auth/register`, user)
             .then(res => {
-                if (res.status === 201) {
+                if (res.status === 200) {
                     alert("Successfully registered.")
                     navigate("/signin")
                 }
