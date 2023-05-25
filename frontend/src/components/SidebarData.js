@@ -27,13 +27,13 @@ export const SidebarData = [
           },
           {
             title: "Monitoring",
-            path: "/flight/search",
+            path: "/",
             icon: <IoIcons.IoMdLaptop />,
             role: ['guest', 'user']
           },
           {
             title: "Search",
-            path: "/flight/search",
+            path: "/",
             icon: <FaIcons.FaSearch />,
             role: ['guest', 'user']
           },
@@ -49,25 +49,25 @@ export const SidebarData = [
         subNav: [
           {
             title: "Create",
-            path: "/flight/create",
+            path: "/",
             icon: <IoIcons.IoMdAddCircle />,
             role: ['user', 'guest']
           },
           {
             title: "Read",
-            path: "/flight/search",
+            path: "/",
             icon: <IoIcons.IoMdBook />,
             role: ['guest', 'user']
           },
           {
             title: "Update",
-            path: "/flight/search",
+            path: "/",
             icon: <IoIcons.IoMdCreate />,
             role: ['guest', 'user']
           },
           {
             title: "Delete",
-            path: "/flight/search",
+            path: "/",
             icon: <FaIcons.FaBackspace />,
             role: ['guest', 'user']
           },
@@ -83,13 +83,13 @@ export const SidebarData = [
         subNav: [
           {
             title: "Regular maintance",
-            path: "/flight/search",
+            path: "/",
             icon: <IoIcons.IoMdHammer />,
             role: ['guest', 'user']
           },
           {
             title: "Emergency maintance",
-            path: "/flight/search",
+            path: "/",
             icon: <FaIcons.FaScrewdriver />,
             role: ['guest', 'user']
           },
@@ -105,13 +105,13 @@ export const SidebarData = [
         subNav: [
           {
             title: "All equipment",
-            path: "/flight/search",
+            path: "/equipment",
             icon: <IoIcons.IoMdBook />,
             role: ['guest', 'user']
           },
           {
             title: "Add",
-            path: "/flight/search",
+            path: "/equipment/create",
             icon: <IoIcons.IoMdCreate />,
             role: ['guest', 'user']
           },

@@ -12,6 +12,8 @@ import Machines from "./pages/Machines";
 import CreateMachine from "./pages/CreateMachine";
 import UpdateMachine from "./pages/UpdateMachine";
 import CreatePlan from "./pages/CreatePlan";
+import CreateEquipment from "./pages/CreateEquipment";
+import Equipment from "./pages/Equipment";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/machine/create" element={<CreateMachine />}></Route>
             <Route path="/machine/update" element={<UpdateMachine />}></Route>
             <Route path="/plan/create" element={<CreatePlan />}></Route>
+            <Route path="/equipment/create" element={<CreateEquipment />}></Route>
+            <Route path="/equipment" element={<Equipment />}></Route>
           </Routes>
       </BrowserRouter>
     </>

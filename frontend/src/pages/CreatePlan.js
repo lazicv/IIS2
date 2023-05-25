@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios'
 
 export default function CreateMaintenancePlan() {
   const [maintenancePlan, setMaintenancePlan] = useState({
@@ -17,7 +18,7 @@ export default function CreateMaintenancePlan() {
     setMaintenancePlan({ ...maintenancePlan, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  /*const handleSubmit = (e) => {
     e.preventDefault();
     
     console.log(maintenancePlan);
@@ -33,23 +34,37 @@ export default function CreateMaintenancePlan() {
       serviceBookId: "",
       version: ""
     });
+  };*/
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:7121/api/plan/create", maintenancePlan);
+      console.log("Plan created successfully!");
+      
+       setMaintenancePlan({
+      
+      machineId: "",
+      machineName: "",
+      maxProd: "",
+      maxDate: "",
+      equipmentAmount: "",
+      parts: "",
+      serviceBookId: "",
+      version: ""
+    });
+      console.log(maintenancePlan);
+    } catch (error) {
+      console.log(error);
+    }
   };
+  
 
   return (
     <div className="container" style={{ marginLeft: "300px" }}>
       <h2>Create Maintenance Plan</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="id">ID:</label>
-          <input
-            type="text"
-            className="form-control"
-            id="id"
-            name="id"
-            value={maintenancePlan.id}
-            onChange={handleChange}
-          />
-        </div>
+        
         <div className="form-group">
           <label htmlFor="machineId">Machine ID:</label>
           <input
