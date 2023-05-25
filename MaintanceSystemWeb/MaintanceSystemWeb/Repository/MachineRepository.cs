@@ -36,14 +36,11 @@ namespace MaintanceSystemWeb.Repository
             return _context.Machines.ToList();
         }
 
-        public Machine IncrementProductedParts(int productedParts)
+        public Machine Update(Machine machine)
         {
-            throw new NotImplementedException();
-        }
-
-        public Machine ResetProductedParts(int producedParts)
-        {
-            throw new NotImplementedException();
+            _context.Machines.Update(machine);
+            _context.SaveChanges();
+            return machine;
         }
     }
 }

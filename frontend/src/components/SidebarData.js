@@ -15,13 +15,13 @@ export const SidebarData = [
         subNav: [
           {
             title: "All",
-            path: "/flight/search",
+            path: "/machines",
             icon: <IoIcons.IoMdBook />,
             role: ['guest', 'user']
           },
           {
-            title: "Create a plan",
-            path: "/flight/search",
+            title: "Add new machine",
+            path: "/machine/create",
             icon: <IoIcons.IoMdCreate />,
             role: ['guest', 'user']
           },

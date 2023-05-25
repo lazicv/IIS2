@@ -16,13 +16,27 @@ namespace MaintanceSystemWeb.Controllers
             _serviceBookService = serviceBookService;
         }
 
-        [HttpPost("create")]
-        public ActionResult<ServiceBook> Create (ServiceBookDto request)
+         [HttpPost("create")]
+        public ActionResult<ServiceBook> Create(ServiceBookDto request)
         {
             /*ServiceBook serviceBook = new ServiceBook(request.Id, request.MachineId);
             _serviceBookService.Create(serviceBook);
             return Ok(serviceBook);*/
-            return Ok("a");
+            return Ok("dada");
         }
+
+        
+         [HttpGet("getall")]
+        public ActionResult<List<ServiceBook>> GetAll()
+        {
+            return Ok(_serviceBookService.GetAll());
+        }
+
+        [HttpGet("getbyid")]
+        public ActionResult<ServiceBook> GetById(int id)
+        {
+            return Ok(_serviceBookService.GetById(id));
+        }
+         
     }
 }

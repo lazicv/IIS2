@@ -8,6 +8,10 @@ import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import HomePage from "./pages/HomePage";
 import Signout from "./utils/Signout";
+import Machines from "./pages/Machines";
+import CreateMachine from "./pages/CreateMachine";
+import UpdateMachine from "./pages/UpdateMachine";
+import CreatePlan from "./pages/CreatePlan";
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
             <Route path="/signin" element={<Signin />}></Route>
             <Route path="/homePage" element={<HomePage />}></Route>
             <Route path="/signout" element={<Signout />}></Route>
+            <Route path="/machines" element={<Machines />}></Route>
+            <Route path="/machine/create" element={<CreateMachine />}></Route>
+            <Route path="/machine/update" element={<UpdateMachine />}></Route>
+            <Route path="/plan/create" element={<CreatePlan />}></Route>
           </Routes>
       </BrowserRouter>
     </>

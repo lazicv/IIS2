@@ -7,8 +7,7 @@ namespace MaintanceSystemWeb.Repository.Core
         Machine Create(Machine machine);
         Machine? FindById(int id);
         Machine? FindByProductedParts(int productedParts);
-        Machine IncrementProductedParts(int productedParts);
-        Machine ResetProductedParts(int producedParts);
+        Machine Update(Machine machine);
         List<Machine> GetAll();
     }
 }

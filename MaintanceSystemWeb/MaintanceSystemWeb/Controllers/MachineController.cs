@@ -43,5 +43,13 @@ namespace MaintanceSystemWeb.Controllers
             _machineService.Create(machine);
             return Ok(machine);
         }
+
+        [HttpPut("update")]
+        public ActionResult<Machine> Update(Machine request)
+        {
+            Machine machine = new Machine(request.Id, request.Name, request.ProductedParts, request.Status);
+            _machineService.Update(machine);
+            return Ok(machine);
+        }
     }
 }

@@ -138,7 +138,7 @@ function Signup() {
                                         <MDBBtn 
                                             className='mb-1' 
                                             size='lg' 
-                                            style={{width: "50%", marginLeft: "25%"}} 
+                                            style={{width: "80%", marginLeft: "25%"}} 
                                             >Register</MDBBtn>
                                     </MDBCol>
                                 </div>

@@ -15,6 +15,7 @@ namespace MaintanceSystemWeb.Settings
         public DbSet<Machine> Machines { get; set; }
         public DbSet<ServiceBook> ServiceBooks { get; set; }
         public DbSet<Servicing> Servicings { get; set; }
+        public DbSet<Plan> Plans { get; set; }
         //public DbSet<UserRoleEnum> Roles { get; set; }
     }
 }

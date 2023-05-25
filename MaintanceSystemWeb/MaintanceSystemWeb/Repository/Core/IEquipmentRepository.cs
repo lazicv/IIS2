@@ -8,5 +8,6 @@ namespace MaintanceSystemWeb.Repository.Core
         Equipment Update(Equipment equipment);
         Equipment Delete(Equipment equipment);
         Equipment? FindByAmount(int amount);
+        List<Equipment> FindAll();
     }
 }

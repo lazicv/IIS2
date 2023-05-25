@@ -3,6 +3,7 @@ using System;
 using MaintanceSystemWeb.Settings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MaintanceSystemWeb.Migrations
 {
     [DbContext(typeof(DotnetDbContext))]
-    partial class DotnetDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230525134824_PlanEntity")]
+    partial class PlanEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

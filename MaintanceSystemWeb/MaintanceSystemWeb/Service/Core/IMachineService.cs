@@ -8,5 +8,6 @@ namespace MaintanceSystemWeb.Service.Core
         Machine? FindById(int id);
         Machine? FindByProductedParts(int productedParts);
         List<Machine> FindAll();
+        Machine Update(Machine machine);
     }
 }

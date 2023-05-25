@@ -23,6 +23,11 @@ namespace MaintanceSystemWeb.Service
             return _equipmentRepository.Delete(equipment);
         }
 
+        public List<Equipment> FindAll()
+        {
+            return _equipmentRepository.FindAll();
+        }
+
         public Equipment FindByAmount(int amount)
         {
             return _equipmentRepository.FindByAmount(amount);

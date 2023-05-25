@@ -1,0 +1,11 @@
+Use case
+ 
+Create a plan:
+Pre conditions:
+	1. Serviser mora biti ulogovan na sistem
+	2. Masina mora da postoji u sistemu
+Actions:
+	1. Serviser unosi podatke poput maksimalnog broja delova koje masina sme da proizvede pre nego sto dodje do redovnog servisiranja ili datum, unosi spisak delova koje je potrebno zameniti/odrzavati, spisak potrebne opreme
+Post condition:
+	1.	Serviser je uspesno napravio plan
+

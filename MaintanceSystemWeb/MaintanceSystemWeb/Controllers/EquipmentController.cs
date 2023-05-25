@@ -40,5 +40,13 @@ namespace MaintanceSystemWeb.Controllers
             _equipmentService.Update(equipment);
             return Ok(equipment);
         }
+
+        
+         [HttpGet("getall")]
+        public ActionResult<List<Equipment>> GetAll()
+        {
+            return Ok(_equipmentService.FindAll());
+        }
+         
     }
 }

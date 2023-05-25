@@ -15,6 +15,12 @@ builder.Services.AddScoped<IMachineRepository, MachineRepository>();
 builder.Services.AddScoped<IMachineService, MachineService>();
 builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
 builder.Services.AddScoped<IEquipmentService, EquipmentService>();
+builder.Services.AddScoped<IServiceBookRepository, ServiceBookRepository>();
+builder.Services.AddScoped<IServiceBookService, ServiceBookService>();
+builder.Services.AddScoped<IServicingRepository, ServicingRepository>();
+builder.Services.AddScoped<IServicingService, ServicingService>();
+builder.Services.AddScoped<IPlanRepository, PlanRepository>();
+builder.Services.AddScoped<IPlanService, PlanService>();
 
 // Add services to the container.
 builder.Services.AddControllers();

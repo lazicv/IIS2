@@ -6,5 +6,6 @@ namespace MaintanceSystemWeb.DTO
     {
         public int Id { get; set; }
         public int MachineId { get; set; }
+        
     }
 }

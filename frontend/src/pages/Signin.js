@@ -104,7 +104,7 @@ function Signin() {
                                         <MDBBtn 
                                             className='mb-1' 
                                             size='lg' 
-                                            style={{width: "50%", marginLeft: "25%"}} 
+                                            style={{width: "70%", marginLeft: "25%"}} 
                                             >Sign in</MDBBtn>
                                     </MDBCol>
                                 </div>

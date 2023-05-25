@@ -32,5 +32,10 @@ namespace MaintanceSystemWeb.Service
         {
             return _machineRepository.FindByProductedParts(productedParts);
         }
+
+        public Machine Update(Machine machine)
+        {
+            return _machineRepository.Update(machine);
+        }
     }
 }

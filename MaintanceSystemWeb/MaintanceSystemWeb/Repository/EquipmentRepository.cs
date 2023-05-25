@@ -27,6 +27,11 @@ namespace MaintanceSystemWeb.Repository
             return equipment;
         }
 
+        public List<Equipment> FindAll()
+        {
+            return _context.Equipments.ToList();
+        }
+
         public Equipment? FindByAmount(int amount)
         {
             return _context.Equipments.FirstOrDefault(x => x.Amount == amount);
